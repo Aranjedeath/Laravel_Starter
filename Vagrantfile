@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
   config.ssh.forward_agent = true
 
   config.vm.provider :virtualbox do |vb|
-    vb.name = "Laravel Bootstrap"
+    vb.name = "Laravel Start Admin"
     vb.customize ["modifyvm", :id, "--memory", "512"]
     vb.customize ["modifyvm", :id, "--ostype", "Ubuntu_64"]
   end

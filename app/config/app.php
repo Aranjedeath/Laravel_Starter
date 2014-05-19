@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'key' => 'VeJJgLZx4twKZc1r10EWOLnKjCRxlHo6',
+	'key' => 'Vb0LuI0YRj1tUI1rt0TaZ7Sl12dX4MDE',
 
 	/*
 	|--------------------------------------------------------------------------
