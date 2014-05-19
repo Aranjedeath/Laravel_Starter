@@ -49,6 +49,7 @@ echo '...done'
 # ----------------
 echo '- Installing git...'
 apt-get install git-core -y --force-yes
+git config --global color.ui auto
 echo '...done'
 
 # ----------------
