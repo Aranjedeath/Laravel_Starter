@@ -41,7 +41,7 @@ return array(
 	|
 	*/
 
-	'timezone' => 'US/Central',
+	'timezone' => 'America/Sao_Paulo',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'locale' => 'en',
+	'locale' => 'pt',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -67,7 +67,7 @@ return array(
 	|
 	*/
 
-	'fallback_locale' => 'en',
+	'fallback_locale' => 'br',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -248,6 +248,6 @@ return array(
 		'LCP'			  => 'Gcphost\Helpers\LaravelCP',
 
 	),
-	'available_language' => array('en'),
+	'available_language' => array('en','pt'),
 
 );

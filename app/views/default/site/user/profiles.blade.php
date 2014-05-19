@@ -4,6 +4,9 @@
 {{ Form::input_group('text', 'user_profiles[@if(isset($profile)){{{$profile->id}}}@elsenew@endif][displayname]', 
 	Lang::get('admin/users/profile.Full_Name'), isset($profile) ? $profile->displayname : null, $errors) }} 
 
+{{ Form::input_group('text', 'user_profiles[@if(isset($profile)){{{$profile->id}}}@elsenew@endif][zip]', 
+	Lang::get('admin/users/profile.zip'), isset($profile) ? $profile->zip : null, $errors) }} 
+
 {{ Form::input_group('text', 'user_profiles[@if(isset($profile)){{{$profile->id}}}@elsenew@endif][address]', 
 	Lang::get('admin/users/profile.address'), isset($profile) ? $profile->address : null, $errors) }} 
 
@@ -12,9 +15,6 @@
 
 {{ Form::input_group('text', 'user_profiles[@if(isset($profile)){{{$profile->id}}}@elsenew@endif][state]', 
 	Lang::get('admin/users/profile.state'), isset($profile) ? $profile->state : null, $errors) }} 
-
-{{ Form::input_group('text', 'user_profiles[@if(isset($profile)){{{$profile->id}}}@elsenew@endif][zip]', 
-	Lang::get('admin/users/profile.zip'), isset($profile) ? $profile->zip : null, $errors) }} 
 
 {{ Form::input_group('text', 'user_profiles[@if(isset($profile)){{{$profile->id}}}@elsenew@endif][country]', 
 	Lang::get('admin/users/profile.country'), isset($profile) ? $profile->country : null, $errors) }} 

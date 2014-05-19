@@ -18,7 +18,7 @@
 					</a>
 					<ul aria-labelledby="nav_users" class="dropdown-menu">
 						<li{{ (Request::is('admin/users*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/users') }}}"><span class="fa fa-user fa-fw"></span> &nbsp; {{{ Lang::get('core.users') }}}</a></li>
-						<li{{ (Request::is('admin/roles*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/roles') }}}"><span class="fa fa-warning fa-fw"></span> &nbsp; {{{ Lang::get('Roles') }}}</a></li>
+						<li{{ (Request::is('admin/roles*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/roles') }}}"><span class="fa fa-warning fa-fw"></span> &nbsp; {{{ Lang::get('core.roles') }}}</a></li>
 					</ul>
 				</li>
 				@yield('main-nav-post')
