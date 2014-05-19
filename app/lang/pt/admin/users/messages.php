@@ -2,7 +2,7 @@
 
 return array(
 
-	'select_group' => 'Select a group to assign to the user, remember that a user takes on the permissions of the group they are assigned.',
+	'select_group' => 'Selecione um grupo para atribuir ao usuário, lembre-se que um usuário assume as permissões do grupo são atribuídos.',
 	'already_exists'    => 'User already exists!',
 	'does_not_exist'    => 'User does not exist.',
 	'login_required'    => 'The login field is required',

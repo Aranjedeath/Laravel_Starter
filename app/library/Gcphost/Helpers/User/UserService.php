@@ -161,12 +161,12 @@ class UserService {
 			return Api::make($this->user->all()->get()->toArray());
 		} else return Datatables::of($this->user->all())
         ->add_column('actions', '<div class="btn-group">
-		<a href="{{{ URL::to(\'admin/users/\' . $id . \'/edit\' ) }}}" class="modalfy btn btn-sm btn-primary">{{{ Lang::get(\'button.edit\') }}}</a> 
-		<a href="{{{ URL::to(\'admin/users/\' . $id . \'/email\' ) }}}" class="modalfy btn btn-sm btn-default">{{{ Lang::get(\'button.email\') }}}</a>
+		<a href="{{{ URL::to(\'admin/users/\' . $id . \'/edit\' ) }}}" class="modalfy btn btn-sm btn-primary"><span class="glyphicon glyphicon-pencil"></span></a> 
+		<a href="{{{ URL::to(\'admin/users/\' . $id . \'/email\' ) }}}" class="modalfy btn btn-sm btn-default"><span class="glyphicon glyphicon-envelope"></span></a>
 		@if($id == Auth::user()->id)
-			<a href="#" class="disabled btn btn-sm btn-danger">{{{ Lang::get(\'button.delete\') }}}</a>
+			<a href="#" class="disabled btn btn-sm btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
 		@else
-			<a data-row="{{{  $id }}}" data-table="users" data-method="delete" href="{{{ URL::to(\'admin/users/\' . $id . \'\' ) }}}" class="confirm-ajax-update btn btn-sm btn-danger">{{{ Lang::get(\'button.delete\') }}}</a>
+			<a data-row="{{{  $id }}}" data-table="users" data-method="delete" href="{{{ URL::to(\'admin/users/\' . $id . \'\' ) }}}" class="confirm-ajax-update btn btn-sm btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
 		@endif</div>
             ')
 

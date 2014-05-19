@@ -2,10 +2,10 @@
 
 return array(
 
-	'user_management'    => 'User Management',
-	'user_update'        => 'Update a User',
-	'user_delete'        => 'Delete a User',
-	'create_a_new_user'  => 'Create a New User',
-	'user_email'  => 'E-mail User',
+	'user_management'   => 'Gerenciar Usuários',
+	'user_update'       => 'Atualizar',
+	'user_delete'       => 'Deletar',
+	'create_a_new_user' => 'Adicionar',
+	'user_email'        => 'E-mail',
 
 );

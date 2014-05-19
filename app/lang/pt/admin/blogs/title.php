@@ -3,8 +3,8 @@
 return array(
 
 	'blog_management'    => 'Slug Management',
-	'blog_update'        => 'Update a Slug',
-	'blog_delete'        => 'Delete a Slug',
-	'create_a_new_blog'  => 'Create a New Slug',
+	'blog_update'        => 'Atualizar',
+	'blog_delete'        => 'Deletar',
+	'create_a_new_blog'  => 'Adicionar',
 
 );

@@ -80,14 +80,13 @@ class RoleService {
 		return $this->role->paginate($limit);
 	}
 
-	public function get()
-    {
+	public function get(){
 		if(Api::Enabled()){
 			return Api::make($this->role->all()->get()->toArray());
 		} else return Datatables::of($this->role->all())
         ->edit_column('users', '{{{ DB::table(\'assigned_roles\')->where(\'role_id\', \'=\', $id)->count()  }}}')
-        ->add_column('actions', '<div class="btn-group"><a href="{{{ URL::to(\'admin/roles/\' . $id . \'/edit\' ) }}}" class="modalfy btn btn-sm btn-primary">{{{ Lang::get(\'button.edit\') }}}</a>
-                                <a data-row="{{{  $id }}}" data-method="delete" data-table="roles" href="{{{ URL::to(\'admin/roles/\' . $id . \'\' ) }}}" class="confirm-ajax-update btn btn-sm btn-danger" @if($name == "admin" || $name == "users")disabled@endif>{{{ Lang::get(\'button.delete\') }}}</a></div>
+        ->add_column('actions', '<div class="btn-group"><a href="{{{ URL::to(\'admin/roles/\' . $id . \'/edit\' ) }}}" class="modalfy btn btn-sm btn-primary"><span class="glyphicon glyphicon-pencil"></span></a>
+                                <a data-row="{{{  $id }}}" data-method="delete" data-table="roles" href="{{{ URL::to(\'admin/roles/\' . $id . \'\' ) }}}" class="confirm-ajax-update btn btn-sm btn-danger" @if($name == "admin" || $name == "users")disabled@endif><span class="glyphicon glyphicon-remove"></span></a></div>
                     ')
         ->make();
     }

@@ -73,9 +73,9 @@ class TodosService {
 			 ->edit_column('created_at','{{{ Carbon::parse($created_at)->diffForHumans() }}}')
 			 ->edit_column('displayname','{{{ $displayname ? : "Nobody" }}}')
 	        ->add_column('actions', '<div class="btn-group" style="width: 200px">
-		<a href="{{{ URL::to(\'admin/todos/\' . $id . \'/edit\' ) }}}" class="modalfy btn btn-sm btn-primary">{{{ Lang::get(\'button.edit\') }}}</a> 
+		<a href="{{{ URL::to(\'admin/todos/\' . $id . \'/edit\' ) }}}" class="modalfy btn btn-sm btn-primary"><span class="glyphicon glyphicon-pencil"></span></a> 
 		<a href="{{{ URL::to(\'admin/todos/\' . $id . \'/assign\' ) }}}" data-row="{{{  $id }}}" data-table="todos" class="confirm-ajax-update btn btn-sm btn-default">{{{ Lang::get(\'button.assign_to_me\') }}}</a>
-			<a data-row="{{{  $id }}}" data-table="todos" data-method="delete" href="{{{ URL::to(\'admin/todos/\' . $id . \'\' ) }}}" class="confirm-ajax-update btn btn-sm btn-danger">{{{ Lang::get(\'button.delete\') }}}</a>
+			<a data-row="{{{  $id }}}" data-table="todos" data-method="delete" href="{{{ URL::to(\'admin/todos/\' . $id . \'\' ) }}}" class="confirm-ajax-update btn btn-sm btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
 		</div>
             ')
 			->make();
